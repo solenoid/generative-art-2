@@ -22,6 +22,8 @@ I did a little exploration on much wider / longer sets of circles and also consi
 
 Experimenting with some more circle color choices that share amongst nearby pattern neighbors while being less hand picked is another path for a potential future.
 
+This was really fun for a rigid repeat without any complexity either from randomness or inherent in the rules of creation. Figuring out a cellular automata approach to how to vary the pattern may be a next step on having this be less hand coded and more rules generations based.
+
 ### Build / Deploy / Formatting
 
 Just run a local webserver like `python3 -m http.server 1002` and go to:
