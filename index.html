@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Generative Art 2</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="container"></div>
+    </div>
+    <script type="module">
+      import { idGenerator } from './utils.js'
+      import { draw } from './circles.js'
+      const container = document.querySelector('.container')
+      const width = 720
+      const artPad = 40
+      const circlesAcross = 25
+      const circlesDown = 29
+      container.innerHTML = '<div id="main"></div>'
+      draw(`#main`, width, artPad, circlesAcross, circlesDown)
+    </script>
+  </body>
+</html>
