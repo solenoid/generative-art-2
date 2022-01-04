@@ -83,11 +83,11 @@ const color = (r, i, j) => {
   if (row2 && [0, 24].includes(m)) colorSequence = 6
   if (row3 && [24].includes(m)) colorSequence = 6
 
-  if (r > 9) return colorSequences[colorSequence][0]
-  if (r > 7) return colorSequences[colorSequence][1]
-  if (r > 5) return colorSequences[colorSequence][2]
-  if (r > 3) return colorSequences[colorSequence][3]
-  if (r > 1) return colorSequences[colorSequence][4]
+  if (r > 15) return colorSequences[colorSequence][0]
+  if (r > 12) return colorSequences[colorSequence][1]
+  if (r > 9) return colorSequences[colorSequence][2]
+  if (r > 6) return colorSequences[colorSequence][3]
+  if (r > 3) return colorSequences[colorSequence][4]
   // should never hit this last return
   return '#000'
 }
@@ -95,7 +95,7 @@ const color = (r, i, j) => {
 const sharedAttrs = `fill=none stroke-width="1"`
 const circles = (r, i, j, cx, cy) => {
   if (r < 2) return ''
-  const smaller = circles(r - 2, i, j, cx, cy)
+  const smaller = circles(r - 3, i, j, cx, cy)
   return `<circle
   cx="${cx}"
   cy="${cy}"
@@ -119,7 +119,7 @@ export const draw = (
   const xMove = radius * 2
   // 3:4 is the ratio for base:height of an equilateral triangle
   const yMove = radius * 2 * (7 / 8)
-  const betweenCircle = 4
+  const betweenCircle = 8
   const drawHeight = yMove * circlesDown + betweenCircle
   const height = drawHeight + artPad * 2
 
